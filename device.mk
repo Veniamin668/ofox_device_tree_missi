@@ -28,6 +28,3 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
-
-# Наследование конфигурации OrangeFox (вместо старого vendor/omni)
-$(call inherit-product, vendor/fox/config/dirac.mk)
