@@ -6,6 +6,7 @@
 #
 
 LOCAL_PATH := device/xiaomi/missi
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -16,17 +17,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
-
-PRODUCT_PACKAGES += \
-    bootctrl.sp9863a
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    android.hardware.boot@1.0-service \
     bootctrl.sp9863a \
-    libgptutils \
-    libz \
-    libcutils
+    libgptutils
 
+# Дополнительные утилиты обновления
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
