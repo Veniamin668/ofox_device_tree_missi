@@ -8,7 +8,6 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/omni_missi.mk
 
-COMMON_LUNCH_CHOICES := \
-    omni_missi-user \
-    omni_missi-userdebug \
-    omni_missi-eng
+# COMMON_LUNCH_CHOICES полностью удаляем. 
+# Современный сборщик сам подхватит omni_missi.mk, 
+# так как он указан в PRODUCT_MAKEFILES.
