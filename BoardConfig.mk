@@ -8,7 +8,7 @@
 DEVICE_PATH := device/xiaomi/missi
 
 # For building with minimal manifest
-ALLOW_MISSING_DEPENDENCIES := false
+ALLOW_MISSING_DEPENDENCIES := true
 
 # A/B
 AB_OTA_UPDATER := true
