@@ -25,7 +25,6 @@ AB_OTA_PARTITIONS += \
     odm \
     system_dlkm \
     dtbo
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -89,6 +88,11 @@ BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system system_ext vendor odm product vendor_dlkm system_dlkm
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
+
+# Vendor Boot & Recovery configuration
+BOARD_INCLUDE_RECOVERY_RAMDISK := true
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 104857600
 
 # Platform
 TARGET_BOARD_PLATFORM := sp9863a
