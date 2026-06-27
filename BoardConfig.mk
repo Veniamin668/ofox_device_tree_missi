@@ -8,7 +8,7 @@
 DEVICE_PATH := device/xiaomi/missi
 
 # For building with minimal manifest
-ALLOW_MISSING_DEPENDENCIES := true
+ALLOW_MISSING_DEPENDENCIES := false
 
 # A/B
 AB_OTA_UPDATER := true
@@ -105,9 +105,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
 
-# Verified Boot
-BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+# Verified Boot - Отключаем верификацию внутри самого vendor_boot
+BOARD_AVB_ENABLE := false
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
